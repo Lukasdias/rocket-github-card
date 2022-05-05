@@ -6,7 +6,16 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'rocket-bg': "#000000",
+        'rocket-bg-card': '#0E1218',
+        'rocket-card-text': '#F1F1F1',
+        'rocket-img-profile': '#8257e5',
+        'rocket-card-button': '#FFF',
+        'rocket-card-button-border': '#1A1A1A'
+      }
+    }
   },
   plugins: []
 }
