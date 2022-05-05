@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "author": {
-    "name": "Lukas Dias",
+    "name": "Lukas Dias"
   },
   "scripts": {
     "dev": "vite",
