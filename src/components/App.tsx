@@ -42,11 +42,14 @@ function App() {
         const response: UserProps = await axios.get(
           `https://api.github.com/users/${username}`
         )
-        console.log(response.data)
+        // console.log(response.data)
         setSearchedUser(response)
         setIsUsernameInvalid(false)
       } catch (error) {
         setIsUsernameInvalid(true)
+        setTimeout(() => {
+          setIsUsernameInvalid(false)
+        }, 1500)
         console.error(error)
       }
       setIsSearchingForUser(false)
