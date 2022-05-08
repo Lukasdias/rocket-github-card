@@ -38,7 +38,7 @@ function App() {
     setIsTakingScreenshot(true)
     try {
       const image = await html2canvas(userCard.current, {
-        logging: true,
+        //logging: true,
         allowTaint: true,
         useCORS: true,
         backgroundColor: 'none',
