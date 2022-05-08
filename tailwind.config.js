@@ -20,5 +20,5 @@ module.exports = {
       sans: ['Prompt', 'sans-serif']
     }
   },
-  plugins: []
+  plugins: [require('@tailwindcss/typography')]
 }
