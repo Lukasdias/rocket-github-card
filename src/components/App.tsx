@@ -38,17 +38,16 @@ function App() {
     setIsTakingScreenshot(true)
     try {
       const image = await html2canvas(userCard.current, {
-        logging: false,
+        logging: true,
         // allowTaint: false,
-        letterRendering: 1,
         useCORS: true,
         backgroundColor: 'none',
         windowWidth: userCard.current.scrollWidth + 10,
         windowHeight: userCard.current.scrollHeight + 10
       })
 
-      image.toBlob((blob) => {
-        saveAs(blob, 'rocket-card.png')
+      image.toBlob(() => {
+        saveAs('rocket-card.png')
       })
     } catch (error) {
       console.log(error)
