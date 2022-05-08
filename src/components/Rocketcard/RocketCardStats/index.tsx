@@ -53,30 +53,30 @@ export function RocketCardStats({ ...stats }: RocketCardStatsProps) {
       {dataToBeRendered.map((element: DataToBeRenderedProps, idx: number) => (
         <div
           key={idx}
-          className="flex gap-2 w-full text-base font-bold text-white"
+          className="flex gap-2 items-center w-full text-base font-bold text-white"
         >
           <img
-            className="w-5 h-5"
+            className=" w-5 h-5"
             src={element.icon}
             alt={`${element.label} icon`}
           />
           <>
             {element.num && (
-              <span className="flex overflow-hidden max-w-full text-ellipsis whitespace-nowrap">
+              <span className="flex overflow-hidden  max-w-full text-ellipsis whitespace-nowrap">
                 {element.num}
               </span>
             )}
           </>
           <>
             {element.company && (
-              <span className="flex overflow-hidden max-w-full text-ellipsis whitespace-nowrap">
+              <span className="flex overflow-hidden  max-w-full text-ellipsis whitespace-nowrap">
                 {element.company}
               </span>
             )}
           </>
           <>
             {element.location && (
-              <span className="flex overflow-hidden max-w-full text-ellipsis whitespace-nowrap">
+              <span className="flex overflow-hidden  max-w-full text-ellipsis whitespace-nowrap">
                 {element.location}
               </span>
             )}

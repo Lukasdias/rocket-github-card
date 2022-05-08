@@ -1,15 +1,21 @@
-import React from 'react'
+import React, {
+  LegacyRef,
+  MutableRefObject,
+  ReactHTMLElement,
+  RefObject
+} from 'react'
 import { RocketcardId } from './RocketCardId/index'
 import { RocketCardAvatar } from './RocketCardAvatar/index'
 import { UserProps } from 'components/App'
 import { RocketCardStats } from './RocketCardStats/index'
 
 export interface RocketcardProps {
+  cardRef: React.LegacyRef<HTMLDivElement> | null
   bgColor: string
   user: UserProps | null
 }
 
-export function Rocketcard({ bgColor, user }: RocketcardProps) {
+export function Rocketcard({ bgColor, user, cardRef }: RocketcardProps) {
   return (
     <>
       {user != null && (
@@ -23,6 +29,7 @@ export function Rocketcard({ bgColor, user }: RocketcardProps) {
           </div>
 
           <div
+            ref={cardRef}
             className="flex py-3 px-2 w-full max-w-[438px] h-[691px] rounded-[50px] transition-colors duration-200 md:h-[576px] 2xl:h-[700px]"
             style={{
               backgroundColor: bgColor

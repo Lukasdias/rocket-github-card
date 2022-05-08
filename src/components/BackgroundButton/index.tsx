@@ -1,11 +1,17 @@
 import React from 'react'
+import {
+  CardScreenshotButtonProps,
+  CardScreenshotButton
+} from '../CardScreenshotButton/index'
 
-interface BackgroundButtonProps {
+interface BackgroundButtonProps extends CardScreenshotButtonProps {
   onChangeBackground: () => void
 }
 
 export function BackgroundButton({
-  onChangeBackground
+  onChangeBackground,
+  isTakingScreenshot,
+  onTakeScreenShot
 }: BackgroundButtonProps) {
   return (
     <div className="flex flex-col gap-6 items-center p-4 w-full">
@@ -21,6 +27,10 @@ export function BackgroundButton({
       >
         Gerar background
       </button>
+      <CardScreenshotButton
+        isTakingScreenshot={isTakingScreenshot}
+        onTakeScreenShot={onTakeScreenShot}
+      />
     </div>
   )
 }

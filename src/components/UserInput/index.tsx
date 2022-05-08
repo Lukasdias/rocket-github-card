@@ -30,8 +30,6 @@ export function UserInput({
     if (isUsernameInvalid) setIsFeedbackDialogOpen(true)
   }, [isUsernameInvalid])
 
-  console.log(isUsernameInvalid)
-
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     event.currentTarget.value = event.currentTarget.value.replace(/\s/g, '')
     setText(event.target.value)
